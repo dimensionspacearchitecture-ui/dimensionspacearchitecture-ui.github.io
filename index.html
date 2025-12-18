@@ -4,35 +4,87 @@
   <meta charset="UTF-8">
   <title>Your Studio Name</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      max-width: 900px;
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      color: #111;
     }
-    img {
-      width: 100%;
-      margin-bottom: 30px;
+
+    header {
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
     }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: normal;
+      margin: 0;
+    }
+
     nav a {
-      margin-right: 20px;
+      margin-left: 25px;
       text-decoration: none;
-      color: black;
+      color: #111;
+      font-size: 14px;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .content {
+      padding: 60px 40px;
+      max-width: 1200px;
+    }
+
+    .content p {
+      max-width: 600px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 40px;
+      font-size: 14px;
+      color: #666;
+      border-top: 1px solid #eee;
     }
   </style>
 </head>
+
 <body>
 
-<nav>
-  <a href="#">Projects</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
-</nav>
+<header>
+  <h1>Your Studio Name</h1>
+  <nav>
+    <a href="#">Projects</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
 
-<h1>Your Studio Name</h1>
-<p>Architecture practice based in [City].</p>
+<section class="hero">
+  <img src="hero.jpg" alt="Project image">
+</section>
 
-<img src="project1.jpg" alt="Project image">
+<section class="content">
+  <p>
+    Your Studio Name is an architectural practice based in [City].
+    The studio focuses on [housing, cultural, commercial, etc.],
+    with an emphasis on material clarity and spatial quality.
+  </p>
+</section>
+
+<footer>
+  © Your Studio Name
+</footer>
 
 </body>
 </html>
