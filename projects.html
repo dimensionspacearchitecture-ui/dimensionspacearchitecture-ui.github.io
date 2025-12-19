@@ -97,13 +97,20 @@
 </main>
 
 <footer>
-  Dimension Space Architecture
+  © Dimension Space Architecture
 </footer>
 
 <script>
   const projects = {
-    "maungarangi-rd": { images: 13, video: "images/maungarangi-rd/maungarangi.mp4" },
-    "massee-way": { images: 15 } // no video
+    "maungarangi-rd": { 
+      images: 13, 
+      video: "images/maungarangi-rd/maungarangi-rd.mp4",
+      prefix: "maungarangi"
+    },
+    "massee-way": { 
+      images: 15, 
+      prefix: "massee"
+    }
   };
 
   for (const [project, data] of Object.entries(projects)) {
@@ -119,12 +126,12 @@
       grid.appendChild(video);
     }
 
-    // Load images
+    // Load images dynamically
     for (let i = 1; i <= data.images; i++) {
       const img = document.createElement("img");
       const num = String(i).padStart(2, '0');
-      img.src = `images/${project}/${project}_${num}.jpg`;
-      img.alt = `${project} ${num}`;
+      img.src = `images/${project}/${data.prefix}_${num}.jpg`;
+      img.alt = `${data.prefix} ${num}`;
       grid.appendChild(img);
     }
   }
