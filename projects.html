@@ -130,12 +130,15 @@
     for (let i = 1; i <= data.images; i++) {
       const img = document.createElement("img");
       const num = String(i).padStart(2, '0');
-      // Try .jpeg first; if it fails, fallback to .jpg
       img.src = `images/${project}/${data.prefix}_${num}.jpeg`;
       img.alt = `${data.prefix} ${num}`;
-      img.onerror = () => {
-        img.src = `images/${project}/${data.prefix}_${num}.jpg`;
+
+      // Fallback to .jpg if .jpeg fails, only once to avoid flickering
+      img.onerror = function() {
+        this.onerror = null; // remove handler to prevent loop
+        this.src = `images/${project}/${data.prefix}_${num}.jpg`;
       };
+
       grid.appendChild(img);
     }
   }
