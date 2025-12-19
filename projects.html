@@ -83,66 +83,56 @@
 </header>
 
 <main>
+
   <!-- Maungarangi Rd Project -->
-  <section class="project-grid" id="maungarangi-rd">
+  <section class="project-grid">
     <h2>Maungarangi Rd</h2>
-    <div class="grid"></div>
+    <div class="grid">
+      <video src="images/maungarangi-rd/maungarangi-rd.mp4" controls></video>
+      <img src="images/maungarangi-rd/maungarangi_01.jpeg" alt="Maungarangi 01">
+      <img src="images/maungarangi-rd/maungarangi_02.jpeg" alt="Maungarangi 02">
+      <img src="images/maungarangi-rd/maungarangi_03.jpeg" alt="Maungarangi 03">
+      <img src="images/maungarangi-rd/maungarangi_04.jpeg" alt="Maungarangi 04">
+      <img src="images/maungarangi-rd/maungarangi_05.jpeg" alt="Maungarangi 05">
+      <img src="images/maungarangi-rd/maungarangi_06.jpeg" alt="Maungarangi 06">
+      <img src="images/maungarangi-rd/maungarangi_07.jpeg" alt="Maungarangi 07">
+      <img src="images/maungarangi-rd/maungarangi_08.jpeg" alt="Maungarangi 08">
+      <img src="images/maungarangi-rd/maungarangi_09.jpeg" alt="Maungarangi 09">
+      <img src="images/maungarangi-rd/maungarangi_10.jpeg" alt="Maungarangi 10">
+      <img src="images/maungarangi-rd/maungarangi_11.jpeg" alt="Maungarangi 11">
+      <img src="images/maungarangi-rd/maungarangi_12.jpeg" alt="Maungarangi 12">
+      <img src="images/maungarangi-rd/maungarangi_13.jpeg" alt="Maungarangi 13">
+    </div>
   </section>
 
   <!-- Massee Way Project -->
-  <section class="project-grid" id="massee-way">
+  <section class="project-grid">
     <h2>Massee Way</h2>
-    <div class="grid"></div>
+    <div class="grid">
+      <img src="images/massee-way/massee_01.jpeg" alt="Massee 01">
+      <img src="images/massee-way/massee_02.jpeg" alt="Massee 02">
+      <img src="images/massee-way/massee_03.jpeg" alt="Massee 03">
+      <img src="images/massee-way/massee_04.jpeg" alt="Massee 04">
+      <img src="images/massee-way/massee_05.jpeg" alt="Massee 05">
+      <img src="images/massee-way/massee_06.jpeg" alt="Massee 06">
+      <img src="images/massee-way/massee_07.jpeg" alt="Massee 07">
+      <img src="images/massee-way/massee_08.jpeg" alt="Massee 08">
+      <img src="images/massee-way/massee_09.jpeg" alt="Massee 09">
+      <img src="images/massee-way/massee_10.jpeg" alt="Massee 10">
+      <img src="images/massee-way/massee_11.jpeg" alt="Massee 11">
+      <img src="images/massee-way/massee_12.jpeg" alt="Massee 12">
+      <img src="images/massee-way/massee_13.jpeg" alt="Massee 13">
+      <img src="images/massee-way/massee_14.jpeg" alt="Massee 14">
+      <img src="images/massee-way/massee_15.jpeg" alt="Massee 15">
+    </div>
   </section>
+
 </main>
 
 <footer>
   © Dimension Space Architecture
 </footer>
 
-<script>
-  const projects = {
-    "maungarangi-rd": { 
-      images: 13, 
-      video: "images/maungarangi-rd/maungarangi-rd.mp4",
-      prefix: "maungarangi"
-    },
-    "massee-way": { 
-      images: 15, 
-      prefix: "massee"
-    }
-  };
-
-  for (const [project, data] of Object.entries(projects)) {
-    const grid = document.querySelector(`#${project} .grid`);
-
-    // Add video first if it exists
-    if (data.video) {
-      const video = document.createElement("video");
-      video.src = data.video;
-      video.controls = true;
-      video.autoplay = false;
-      video.loop = false;
-      grid.appendChild(video);
-    }
-
-    // Load images dynamically
-    for (let i = 1; i <= data.images; i++) {
-      const img = document.createElement("img");
-      const num = String(i).padStart(2, '0');
-      img.src = `images/${project}/${data.prefix}_${num}.jpeg`;
-      img.alt = `${data.prefix} ${num}`;
-
-      // Fallback to .jpg if .jpeg fails, only once to avoid flickering
-      img.onerror = function() {
-        this.onerror = null; // remove handler to prevent loop
-        this.src = `images/${project}/${data.prefix}_${num}.jpg`;
-      };
-
-      grid.appendChild(img);
-    }
-  }
-</script>
-
 </body>
 </html>
+\
