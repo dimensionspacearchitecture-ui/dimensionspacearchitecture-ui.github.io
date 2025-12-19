@@ -33,12 +33,14 @@
       font-size: 14px;
     }
 
+    /* Grid layout for projects */
     .projects {
-      padding: 60px 40px;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 40px;
+      padding: 60px 40px;
       max-width: 1400px;
+      margin: 0 auto;
     }
 
     .project {
@@ -48,12 +50,20 @@
 
     .project img {
       width: 100%;
+      height: auto;
       display: block;
-      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    /* Optional: subtle zoom on hover */
+    .project img:hover {
+      transform: scale(1.02);
     }
 
     .project-title {
       font-size: 14px;
+      margin-top: 8px;
+      text-align: center;
     }
 
     footer {
@@ -61,6 +71,7 @@
       font-size: 14px;
       color: #666;
       border-top: 1px solid #eee;
+      text-align: center;
     }
   </style>
 </head>
@@ -78,19 +89,16 @@
 
 <section class="projects">
 
+  <!-- Maungarangi Rd project -->
   <a class="project" href="#">
-    <img src="project1.jpg" alt="Project 1">
-    <div class="project-title">Project One — City</div>
+    <img src="images/Maungarangi Rd/hero.jpg" alt="Maungarangi Rd">
+    <div class="project-title">Maungarangi Rd — City</div>
   </a>
 
+  <!-- Massee Way project -->
   <a class="project" href="#">
-    <img src="project2.jpg" alt="Project 2">
-    <div class="project-title">Project Two — City</div>
-  </a>
-
-  <a class="project" href="#">
-    <img src="project3.jpg" alt="Project 3">
-    <div class="project-title">Project Three — City</div>
+    <img src="images/Massee Way/hero.jpg" alt="Massee Way">
+    <div class="project-title">Massee Way — City</div>
   </a>
 
 </section>
