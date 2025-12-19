@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projects — Dimension Space Architecture</title>
+  <title>Projects — Your Studio Name</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <style>
     body {
       margin: 0;
@@ -33,37 +32,34 @@
       font-size: 14px;
     }
 
-    /* Grid layout for projects */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 40px;
+    section.project-grid {
       padding: 60px 40px;
       max-width: 1400px;
       margin: 0 auto;
     }
 
-    .project {
-      text-decoration: none;
-      color: #111;
+    .project-grid h2 {
+      margin-bottom: 20px;
+      font-size: 18px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
     }
 
-    .project img {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .grid img, .grid video {
       width: 100%;
       height: auto;
       display: block;
       transition: transform 0.3s ease;
     }
 
-    /* Optional: subtle zoom on hover */
-    .project img:hover {
+    .grid img:hover {
       transform: scale(1.02);
-    }
-
-    .project-title {
-      font-size: 14px;
-      margin-top: 8px;
-      text-align: center;
     }
 
     footer {
@@ -75,7 +71,6 @@
     }
   </style>
 </head>
-
 <body>
 
 <header>
@@ -87,38 +82,49 @@
   </nav>
 </header>
 
-<section class="projects">
+<main>
+  <!-- Maungarangi Rd Project -->
+  <section class="project-grid" id="maungarangi-rd">
+    <h2>Maungarangi Rd</h2>
+    <div class="grid"></div>
+  </section>
 
-  <!-- Maungarangi Rd project -->
-  <a class="project" href="#">
-    <img src="Images/Maungarangi Rd/hero.jpg" alt="Maungarangi Rd">
-    <div class="project-title">Maungarangi Rd — City</div>
-  </a>
-
-  <!-- Massee Way project -->
-  <a class="project" href="#">
-    <img src="Images/Massee Way/hero.jpg" alt="Massee Way">
-    <div class="project-title">Massee Way — City</div>
-  </a>
-
-</section>
+  <!-- Massee Way Project -->
+  <section class="project-grid" id="massee-way">
+    <h2>Massee Way</h2>
+    <div class="grid"></div>
+  </section>
+</main>
 
 <footer>
-  Dimension Space Architecture
+  © Your Studio Name
 </footer>
+
 <script>
   const projects = {
-    "christensen": 3,      // number of images in folder
-    "maungarangi-rd": 2,
-    "massee-way": 2
+    "maungarangi-rd": { images: 13, video: "images/maungarangi-rd/maungarangi-rd.mp4" },
+    "massee-way": { images: 15 } // no video
   };
 
-  for (const [project, count] of Object.entries(projects)) {
+  for (const [project, data] of Object.entries(projects)) {
     const grid = document.querySelector(`#${project} .grid`);
-    for (let i = 1; i <= count; i++) {
+
+    // Add video first if it exists
+    if (data.video) {
+      const video = document.createElement("video");
+      video.src = data.video;
+      video.controls = true;
+      video.autoplay = false;
+      video.loop = false;
+      grid.appendChild(video);
+    }
+
+    // Load images
+    for (let i = 1; i <= data.images; i++) {
       const img = document.createElement("img");
-      img.src = `images/${project}/${project}_${String(i).padStart(2,'0')}.jpg`;
-      img.alt = `${project} ${i}`;
+      const num = String(i).padStart(2, '0');
+      img.src = `images/${project}/${project}_${num}.jpg`;
+      img.alt = `${project} ${num}`;
       grid.appendChild(img);
     }
   }
