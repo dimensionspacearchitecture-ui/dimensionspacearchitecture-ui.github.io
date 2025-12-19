@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects — Your Studio Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      color: #111;
+    }
+
+    header {
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #111;
+      font-size: 14px;
+    }
+
+    .projects {
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 40px;
+      max-width: 1400px;
+    }
+
+    .project {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .project img {
+      width: 100%;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .project-title {
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 40px;
+      font-size: 14px;
+      color: #666;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1><a href="index.html" style="text-decoration:none;color:#111;">Your Studio Name</a></h1>
+  <nav>
+    <a href="projects.html">Projects</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="projects">
+
+  <a class="project" href="#">
+    <img src="project1.jpg" alt="Project 1">
+    <div class="project-title">Project One — City</div>
+  </a>
+
+  <a class="project" href="#">
+    <img src="project2.jpg" alt="Project 2">
+    <div class="project-title">Project Two — City</div>
+  </a>
+
+  <a class="project" href="#">
+    <img src="project3.jpg" alt="Project 3">
+    <div class="project-title">Project Three — City</div>
+  </a>
+
+</section>
+
+<footer>
+  © Your Studio Name
+</footer>
+
+</body>
+</html>
