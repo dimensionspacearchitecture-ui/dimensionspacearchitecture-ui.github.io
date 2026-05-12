@@ -42,7 +42,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg md:text-xl text-foreground/80 max-w-2xl leading-relaxed mb-10 font-sans"
           >
-            I'm Phil Austen, an Architectural Designer blending hands-on construction knowledge with precise architectural thinking. LBP Category 2 accredited.
+            Phil Austen Architecture is an architectural practice based in Mount Maunganui. The studio focuses on residential projects, with an emphasis on material honesty and thoughtful spatial quality.
           </motion.p>
 
           <motion.div
