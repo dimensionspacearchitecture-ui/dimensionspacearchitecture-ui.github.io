@@ -24,11 +24,14 @@ const formSchema = z.object({
   message: z.string().min(10, "Please provide some details about your project"),
 });
 
+type FormValues = z.infer<typeof formSchema>;
+
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -38,22 +41,36 @@ export function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: FormValues) {
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      console.log(values);
-      setIsSubmitting(false);
+    setSubmitError(null);
+
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error ?? "Something went wrong. Please try again.");
+      }
+
       setIsSuccess(true);
       form.reset();
-      setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
+      setTimeout(() => setIsSuccess(false), 6000);
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
     <section id="contact" className="py-24 md:py-32 bg-background relative overflow-hidden">
       <div className="absolute right-0 bottom-0 w-1/2 h-1/2 bg-card -z-10" />
-      
+
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div
@@ -86,7 +103,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-serif text-primary font-medium mb-1">Email</h4>
-                  <p className="text-foreground/70">design@philausten.co.nz</p>
+                  <p className="text-foreground/70">phil@philausten.co.nz</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -116,7 +133,7 @@ export function Contact() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-serif text-primary">Message Sent</h3>
-                <p className="text-muted-foreground">Thank you for reaching out. I'll get back to you shortly.</p>
+                <p className="text-muted-foreground">Thank you for reaching out. Phil will be in touch shortly.</p>
               </div>
             ) : (
               <Form {...form}>
@@ -128,7 +145,12 @@ export function Contact() {
                       <FormItem>
                         <FormLabel className="text-foreground">Full Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="John Doe" className="bg-background border-border rounded-none focus-visible:ring-secondary" {...field} data-testid="input-contact-name" />
+                          <Input
+                            placeholder="John Doe"
+                            className="bg-background border-border rounded-none focus-visible:ring-secondary"
+                            {...field}
+                            data-testid="input-contact-name"
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -142,7 +164,12 @@ export function Contact() {
                         <FormItem>
                           <FormLabel className="text-foreground">Email</FormLabel>
                           <FormControl>
-                            <Input placeholder="john@example.com" className="bg-background border-border rounded-none focus-visible:ring-secondary" {...field} data-testid="input-contact-email" />
+                            <Input
+                              placeholder="john@example.com"
+                              className="bg-background border-border rounded-none focus-visible:ring-secondary"
+                              {...field}
+                              data-testid="input-contact-email"
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -155,7 +182,12 @@ export function Contact() {
                         <FormItem>
                           <FormLabel className="text-foreground">Phone (Optional)</FormLabel>
                           <FormControl>
-                            <Input placeholder="+64 21..." className="bg-background border-border rounded-none focus-visible:ring-secondary" {...field} data-testid="input-contact-phone" />
+                            <Input
+                              placeholder="+64 21..."
+                              className="bg-background border-border rounded-none focus-visible:ring-secondary"
+                              {...field}
+                              data-testid="input-contact-phone"
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -169,10 +201,10 @@ export function Contact() {
                       <FormItem>
                         <FormLabel className="text-foreground">Project Details</FormLabel>
                         <FormControl>
-                          <Textarea 
-                            placeholder="Tell me a bit about your project site, timeline, and goals..." 
-                            className="min-h-[120px] bg-background border-border rounded-none focus-visible:ring-secondary resize-none" 
-                            {...field} 
+                          <Textarea
+                            placeholder="Tell me a bit about your project site, timeline, and goals..."
+                            className="min-h-[120px] bg-background border-border rounded-none focus-visible:ring-secondary resize-none"
+                            {...field}
                             data-testid="input-contact-message"
                           />
                         </FormControl>
@@ -180,8 +212,11 @@ export function Contact() {
                       </FormItem>
                     )}
                   />
-                  <Button 
-                    type="submit" 
+                  {submitError && (
+                    <p className="text-sm text-red-600" data-testid="text-contact-error">{submitError}</p>
+                  )}
+                  <Button
+                    type="submit"
                     className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-none py-6 text-base"
                     disabled={isSubmitting}
                     data-testid="button-contact-submit"
