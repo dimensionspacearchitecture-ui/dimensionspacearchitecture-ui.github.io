@@ -1,0 +1,38 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "0PVVmJMhLrMNRlTt57TAB"
+uri = "file://artifacts/phil-austen/src/assets/images/gallery-1.png"
+type = "image"
+title = "Coastal timber home exterior"
+
+[[generated]]
+id = "tKpfUNDWlX0soJ-xjOKjM"
+uri = "file://artifacts/phil-austen/src/assets/images/gallery-2.png"
+type = "image"
+title = "Cedar and iron home"
+
+[[generated]]
+id = "94nvVbINp5QfnmpokUGxt"
+uri = "file://artifacts/phil-austen/src/assets/images/gallery-3.png"
+type = "image"
+title = "Timber beams interior"
+
+[[generated]]
+id = "fVFmTmwXu76AYXagVLVmr"
+uri = "file://artifacts/phil-austen/src/assets/images/gallery-4.png"
+type = "image"
+title = "Modern villa alterations"
+
+[[generated]]
+id = "0PctDZRktz7fUChiojZ4v"
+uri = "file://artifacts/phil-austen/src/assets/images/gallery-5.png"
+type = "image"
+title = "Minimalist coastal bach"
+
+[[generated]]
+id = "ktISYgz-NyfMkxTEvYdfq"
+uri = "file://artifacts/phil-austen/src/assets/images/gallery-6.png"
+type = "image"
+title = "Modern residential facade"
