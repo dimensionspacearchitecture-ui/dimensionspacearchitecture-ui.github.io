@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "Phil Austen Architectural Design"
+title = "Dimension Space Architecture"
 version = "1.0.0"
 id = "artifacts/phil-austen"
 router = "path"

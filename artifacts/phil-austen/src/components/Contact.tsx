@@ -103,7 +103,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-serif text-primary font-medium mb-1">Email</h4>
-                  <p className="text-foreground/70">phil@philausten.co.nz</p>
+                  <p className="text-foreground/70">phil@dimensionspace.co.nz</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -112,7 +112,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-serif text-primary font-medium mb-1">Phone</h4>
-                  <p className="text-foreground/70">+64 21 000 0000</p>
+                  <p className="text-foreground/70">027 5606 949</p>
                 </div>
               </div>
             </div>

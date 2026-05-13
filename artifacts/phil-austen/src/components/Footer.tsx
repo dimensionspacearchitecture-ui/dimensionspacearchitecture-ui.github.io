@@ -19,7 +19,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <h2 className="text-2xl font-serif font-semibold tracking-tight mb-3">
-              DIMENSION SPACE<span className="text-secondary">.</span>
+              DIMENSION SPACE ARCHITECTURE<span className="text-secondary">.</span>
             </h2>
             <p className="text-primary-foreground/50 text-sm leading-relaxed max-w-xs">
               Architectural Designer &amp; LBP Level 2 / Category 2.
@@ -55,9 +55,9 @@ export function Footer() {
               Get in Touch
             </p>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
-              phil@philausten.co.nz
+              phil@dimensionspace.co.nz
               <br />
-              +64 21 000 0000
+              027 5606 949
             </p>
           </div>
         </div>

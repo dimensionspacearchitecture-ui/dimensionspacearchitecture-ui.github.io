@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
@@ -125,7 +125,7 @@
   --chart-5: 0 84% 60%;
 
   --app-font-sans: 'Plus Jakarta Sans', sans-serif;
-  --app-font-serif: 'Fraunces', serif;
+  --app-font-serif: 'Plus Jakarta Sans', sans-serif;
   --app-font-mono: Menlo, monospace;
   --radius: 0rem; /* Sharp, architectural corners */
   --shadow-2xs: 0px 2px 0px 0px hsl(214 32% 15% / 0.05);
