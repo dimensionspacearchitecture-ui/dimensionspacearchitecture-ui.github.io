@@ -19,7 +19,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <h2 className="text-2xl font-serif font-semibold tracking-tight mb-3">
-              PHIL AUSTEN<span className="text-secondary">.</span>
+              DIMENSION SPACE<span className="text-secondary">.</span>
             </h2>
             <p className="text-primary-foreground/50 text-sm leading-relaxed max-w-xs">
               Architectural Designer &amp; LBP Level 2 / Category 2.
@@ -63,7 +63,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-primary-foreground/35 text-xs">
-          <p>&copy; {new Date().getFullYear()} Phil Austen Architecture. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Dimension Space Architecture. All rights reserved.</p>
           <p>Mount Maunganui, New Zealand</p>
         </div>
       </div>

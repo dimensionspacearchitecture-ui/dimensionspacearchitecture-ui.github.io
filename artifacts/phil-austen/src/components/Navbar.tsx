@@ -44,7 +44,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
         <Link href="/" onClick={(e) => handleNavClick(e, "#top")} className="text-xl md:text-2xl font-serif font-semibold tracking-tight text-primary z-50 relative">
-          PHIL AUSTEN<span className="text-secondary">.</span>
+          DIMENSION SPACE<span className="text-secondary">.</span>
         </Link>
 
         {/* Desktop Nav */}

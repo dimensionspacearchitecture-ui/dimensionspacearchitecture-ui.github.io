@@ -50,8 +50,8 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg md:text-xl text-foreground/75 max-w-xl leading-relaxed mb-12 font-sans"
           >
-            Phil Austen Architecture is an architectural practice based in Mount
-            Maunganui. The studio focuses on residential projects, with an
+            Dimension Space Architecture is an architectural practice based in
+            Mount Maunganui. The studio focuses on residential projects, with an
             emphasis on material honesty and thoughtful spatial quality.
           </motion.p>
 
