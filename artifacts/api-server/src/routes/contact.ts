@@ -30,7 +30,7 @@ router.post("/contact", async (req, res) => {
   const resend = new Resend(apiKey);
 
   const { error } = await resend.emails.send({
-    from: "Phil Austen Architecture <onboarding@resend.dev>",
+    from: "Dimension Space Architecture <onboarding@resend.dev>",
     to: ["dimensionspacearchitecture@gmail.com"],
     replyTo: email,
     subject: `New enquiry from ${name}`,
