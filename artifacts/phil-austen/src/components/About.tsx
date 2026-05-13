@@ -46,7 +46,7 @@ export function About() {
 
             <div className="space-y-5 text-foreground/75 text-lg leading-relaxed font-sans">
               <p>
-                Phil Austen Architecture was founded by Phil Austen, an
+                Dimension Space Architecture was founded by Phil Austen, an
                 Architectural Designer with over 8 years of hands-on experience
                 in the New Zealand construction industry. The studio is based in
                 Mount Maunganui, Bay of Plenty.
