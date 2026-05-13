@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
 
 const CAPABILITIES = [
   "New Residential Design",
@@ -9,7 +8,7 @@ const CAPABILITIES = [
   "Site Analysis & Feasibility",
   "Concept to Construction Drawings",
   "LBP Category 2 Scope Projects",
-  "Council Navigation & Liaison"
+  "Council Navigation & Liaison",
 ];
 
 export function Capabilities() {
@@ -24,12 +23,20 @@ export function Capabilities() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-5"
           >
-            <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6">
-              Capabilities & <br className="hidden md:block" />
-              <span className="italic text-secondary">Competencies</span>
+            <span className="text-secondary font-semibold tracking-widest uppercase text-sm mb-4 block">
+              Services
+            </span>
+            <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6 leading-tight">
+              Capabilities &{" "}
+              <br className="hidden md:block" />
+              <span className="italic text-muted-foreground">Competencies</span>
             </h2>
-            <p className="text-foreground/70 text-lg leading-relaxed mb-8">
-              From initial site analysis to full construction documentation, I provide comprehensive architectural services. My LBP Category 2 accreditation means I am qualified to design and document complex residential buildings, ensuring full compliance with the New Zealand Building Code.
+            <p className="text-foreground/70 text-lg leading-relaxed">
+              From initial site analysis through to full construction
+              documentation, the studio delivers comprehensive architectural
+              services. LBP Category 2 accreditation means the work is fully
+              qualified for complex residential buildings under the New Zealand
+              Building Code.
             </p>
           </motion.div>
 
@@ -40,16 +47,27 @@ export function Capabilities() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-7"
           >
-            <div className="bg-background border border-border p-8 md:p-12 relative">
-              {/* Decorative corner */}
-              <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-secondary/50 -mt-2 -mr-2" />
-              
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+            <div className="relative">
+              {/* Corner accent */}
+              <div className="absolute -top-3 -right-3 w-14 h-14 border-t-2 border-r-2 border-secondary/40" />
+
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-0 border border-border bg-background">
                 {CAPABILITIES.map((cap, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                    <span className="text-foreground font-medium">{cap}</span>
-                  </li>
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.3 + index * 0.06 }}
+                    className="flex items-center gap-4 px-6 py-5 border-b border-r border-border last:border-b-0 hover:bg-card transition-colors"
+                  >
+                    <span className="text-xs font-bold text-secondary/60 font-mono w-5 shrink-0">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-foreground font-medium text-sm md:text-base leading-snug">
+                      {cap}
+                    </span>
+                  </motion.li>
                 ))}
               </ul>
             </div>
