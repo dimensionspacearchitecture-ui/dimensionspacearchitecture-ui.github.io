@@ -79,12 +79,14 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6">
-              Let's discuss your <br />
-              <span className="italic text-secondary">next project</span>.
+            <h2 className="text-3xl md:text-5xl font-black text-primary mb-2 leading-tight tracking-tight">
+              Let's discuss your
+            </h2>
+            <h2 className="text-3xl md:text-5xl font-extralight text-muted-foreground mb-6 leading-tight tracking-tight">
+              next project.
             </h2>
             <p className="text-foreground/70 text-lg mb-12 max-w-md">
-              Whether you're planning a new build or an alteration, I'd love to hear about your vision. Get in touch to arrange an initial consultation.
+              Whether you're planning a new build or an alteration, the studio would love to hear about your vision. Get in touch to arrange an initial consultation.
             </p>
 
             <div className="space-y-8">
@@ -93,7 +95,7 @@ export function Contact() {
                   <MapPin className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-primary font-medium mb-1">Studio Location</h4>
+                  <h4 className="font-bold text-primary text-sm tracking-wide uppercase mb-1">Studio Location</h4>
                   <p className="text-foreground/70">Mount Maunganui<br />Bay of Plenty, New Zealand</p>
                 </div>
               </div>
@@ -102,7 +104,7 @@ export function Contact() {
                   <Mail className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-primary font-medium mb-1">Email</h4>
+                  <h4 className="font-bold text-primary text-sm tracking-wide uppercase mb-1">Email</h4>
                   <p className="text-foreground/70">phil@dimensionspace.co.nz</p>
                 </div>
               </div>
@@ -111,7 +113,7 @@ export function Contact() {
                   <Phone className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-primary font-medium mb-1">Phone</h4>
+                  <h4 className="font-bold text-primary text-sm tracking-wide uppercase mb-1">Phone</h4>
                   <p className="text-foreground/70">027 5606 949</p>
                 </div>
               </div>
@@ -132,7 +134,7 @@ export function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-serif text-primary">Message Sent</h3>
+                <h3 className="text-2xl font-black text-primary tracking-tight">Message Sent</h3>
                 <p className="text-muted-foreground">Thank you for reaching out. Phil will be in touch shortly.</p>
               </div>
             ) : (

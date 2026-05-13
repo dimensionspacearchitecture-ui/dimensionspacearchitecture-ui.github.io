@@ -33,8 +33,11 @@ export function Gallery() {
         >
           <div>
             <span className="text-secondary font-semibold tracking-widest uppercase text-sm mb-4 block">Selected Works</span>
-            <h2 className="text-3xl md:text-5xl font-serif text-primary">
-              Recent <span className="italic text-muted-foreground">Projects</span>.
+            <h2 className="text-3xl md:text-5xl font-black text-primary leading-tight tracking-tight">
+              Recent
+            </h2>
+            <h2 className="text-3xl md:text-5xl font-extralight text-muted-foreground leading-tight tracking-tight">
+              Projects.
             </h2>
           </div>
           <p className="text-foreground/70 max-w-md">
@@ -68,7 +71,7 @@ export function Gallery() {
               </div>
               <div className="pt-4">
                 <p className="text-xs font-semibold tracking-widest uppercase text-secondary mb-1">{project.type}</p>
-                <h3 className="text-lg font-serif text-primary group-hover:text-secondary transition-colors">{project.title}</h3>
+                <h3 className="text-base font-bold text-primary group-hover:text-secondary transition-colors tracking-tight">{project.title}</h3>
               </div>
             </motion.div>
           ))}
@@ -109,7 +112,7 @@ export function Gallery() {
               </div>
               <div className="p-6 md:p-8">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                  <h3 className="text-2xl md:text-3xl font-serif text-primary">{selectedProject.title}</h3>
+                  <h3 className="text-2xl md:text-3xl font-black text-primary tracking-tight">{selectedProject.title}</h3>
                   <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wider">
                     {selectedProject.type}
                   </span>

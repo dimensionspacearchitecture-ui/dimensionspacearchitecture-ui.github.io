@@ -36,9 +36,11 @@ export function Ethos() {
           <span className="text-secondary font-semibold tracking-widest uppercase text-sm mb-4 block">
             Design Ethos
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif mb-6 leading-tight">
-            Designing for the New Zealand landscape with{" "}
-            <span className="italic opacity-80">uncompromising precision</span>.
+          <h2 className="text-3xl md:text-5xl font-black mb-2 leading-tight tracking-tight">
+            Designing for the New Zealand landscape
+          </h2>
+          <h2 className="text-3xl md:text-5xl font-extralight mb-6 leading-tight tracking-tight opacity-70">
+            with uncompromising precision.
           </h2>
         </motion.div>
 
@@ -55,7 +57,7 @@ export function Ethos() {
               <div className="w-14 h-14 border border-primary-foreground/20 flex items-center justify-center mb-8 group-hover:border-secondary/60 transition-colors duration-300">
                 <item.icon className="w-6 h-6 text-secondary" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-serif mb-4 tracking-tight">{item.title}</h3>
+              <h3 className="text-lg font-bold mb-4 tracking-tight uppercase text-primary-foreground">{item.title}</h3>
               <p className="text-primary-foreground/65 font-sans leading-relaxed text-base">
                 {item.description}
               </p>

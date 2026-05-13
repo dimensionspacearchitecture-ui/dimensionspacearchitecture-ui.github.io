@@ -33,9 +33,11 @@ export function Testimonials() {
             <span className="text-secondary font-semibold tracking-widest uppercase text-sm mb-4 block">
               Testimonials
             </span>
-            <h2 className="text-3xl md:text-4xl font-serif text-primary">
-              Client{" "}
-              <span className="italic text-muted-foreground">Feedback</span>
+            <h2 className="text-3xl md:text-4xl font-black text-primary leading-tight tracking-tight">
+              Client
+            </h2>
+            <h2 className="text-3xl md:text-4xl font-extralight text-muted-foreground leading-tight tracking-tight">
+              Feedback.
             </h2>
           </div>
           <p className="text-foreground/50 text-sm max-w-xs text-right hidden md:block">
@@ -55,7 +57,7 @@ export function Testimonials() {
               data-testid={`testimonial-card-${idx}`}
             >
               <div className="mb-8">
-                <span className="text-4xl font-serif text-secondary/25 leading-none block mb-5">
+                <span className="text-5xl font-black text-secondary/20 leading-none block mb-4">
                   &ldquo;
                 </span>
                 <p className="text-foreground/75 leading-relaxed text-base">
@@ -63,7 +65,7 @@ export function Testimonials() {
                 </p>
               </div>
               <div className="pt-6 border-t border-border">
-                <p className="font-serif text-primary font-medium">{t.author}</p>
+                <p className="font-bold text-primary text-sm tracking-wide">{t.author}</p>
                 <p className="text-xs font-semibold tracking-wider text-secondary uppercase mt-1">
                   {t.location}
                 </p>

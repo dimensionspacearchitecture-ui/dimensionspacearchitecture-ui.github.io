@@ -26,10 +26,11 @@ export function Capabilities() {
             <span className="text-secondary font-semibold tracking-widest uppercase text-sm mb-4 block">
               Services
             </span>
-            <h2 className="text-3xl md:text-5xl font-serif text-primary mb-6 leading-tight">
-              Capabilities &{" "}
-              <br className="hidden md:block" />
-              <span className="italic text-muted-foreground">Competencies</span>
+            <h2 className="text-3xl md:text-5xl font-black text-primary mb-2 leading-tight tracking-tight">
+              Capabilities &amp;
+            </h2>
+            <h2 className="text-3xl md:text-5xl font-extralight text-muted-foreground mb-6 leading-tight tracking-tight">
+              Competencies
             </h2>
             <p className="text-foreground/70 text-lg leading-relaxed">
               From initial site analysis through to full construction

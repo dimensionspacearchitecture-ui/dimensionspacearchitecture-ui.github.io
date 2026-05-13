@@ -39,9 +39,11 @@ export function About() {
             <span className="text-secondary font-semibold tracking-widest uppercase text-sm mb-4 block">
               About the Studio
             </span>
-            <h2 className="text-3xl md:text-5xl font-serif text-primary mb-8 leading-tight">
-              Built on{" "}
-              <span className="italic text-muted-foreground">experience</span>.
+            <h2 className="text-3xl md:text-5xl font-black text-primary mb-2 leading-tight tracking-tight">
+              Built on
+            </h2>
+            <h2 className="text-3xl md:text-5xl font-extralight text-muted-foreground mb-8 leading-tight tracking-tight">
+              experience.
             </h2>
 
             <div className="space-y-5 text-foreground/75 text-lg leading-relaxed font-sans">
@@ -68,7 +70,7 @@ export function About() {
             <div className="mt-12 grid grid-cols-3 gap-4 border-t border-border pt-8">
               {STATS.map((stat) => (
                 <div key={stat.label}>
-                  <p className="text-3xl md:text-4xl font-serif text-primary mb-1">
+                  <p className="text-3xl md:text-4xl font-black text-primary mb-1">
                     {stat.value}
                   </p>
                   <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground leading-snug">

@@ -18,8 +18,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
           <div>
-            <h2 className="text-2xl font-serif font-semibold tracking-tight mb-3">
-              DIMENSION SPACE ARCHITECTURE<span className="text-secondary">.</span>
+            <h2 className="leading-none mb-3">
+              <span className="text-xl font-black tracking-tight block">Dimension Space</span>
+              <span className="text-[11px] font-semibold tracking-[0.2em] text-secondary uppercase block mt-0.5">Architecture</span>
             </h2>
             <p className="text-primary-foreground/50 text-sm leading-relaxed max-w-xs">
               Architectural Designer &amp; LBP Level 2 / Category 2.
